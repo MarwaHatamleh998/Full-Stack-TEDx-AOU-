@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-profile_ {
+  margin: 0 auto;
+  width: 400px;
+  border: 2px solid black;
+  padding: 20px;
+}
+
+.info {
+  background-color: #ffffff;
+  padding: 20px;
+
+  & h3 {
+    line-height: 1;
+  }
+}
+
+p {
+  max-height: 200px;
+  overflow-y: scroll;
+  line-height: 1;
+  word-spacing: 1.5;
+}
+
+p,
+h3 {
+  text-shadow: 2px 2px 5px gray;
+}
+
+.card-profile_:hover {
+  outline: 2px solid blue;
+}
+
+.decription {
+  display: block;
+}
+
+.skills_{
+margin-top: 20px;
+}
+
+.skills_ ul li {
+  display: inline-block;
+}
+
+#work_under_pressure {
+  display: none;
+}
+
+#flex {
+  visibility: hidden;
+}
