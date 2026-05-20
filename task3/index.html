@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <h2>Registration from</h2>
+    <form id="register" action="/submit" method="post" target="_blank">
+
+        <input type="text" placeholder="Full Name" autofocus required />
+        <input type="email" placeholder="Email" autofocus required />
+        <input type="password" placeholder="Password" autofocus required />
+        <input type="tel" placeholder="Phone Number" autofocus required />
+        <input type="date" placeholder="Birth Date" autofocus required />
+        <input type="hidden" name="userId" value="111">
+        <input type="text" name="role" value="user" disabled>
+        <textarea name="message" cols="20" rows="3" placeholder="About you..." readonly></textarea>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+    </form>
+
+
+
+    <h2>University Course Selection Form</h2>
+
+    <form>
+        <p>Year:</p>
+
+        <input type="radio" id="year" name="year" value="2022">
+        <label for="2022">2022</label><br>
+
+        <input type="radio" id="year" name="year" value="2023">
+        <label for="2023">2023</label><br>
+
+        <input type="radio" id="year" name="year" value="2024">
+        <label for="2024">2024</label>
+
+
+        <p>Skills:</p>
+        <input type="checkbox" id="item1" name="list" value="Option1">
+        <label for="item1">Option 1</label>
+
+        <input type="checkbox" id="item1" name="list" value="Option1">
+        <label for="item1">Option 1</label>
+
+        <input type="checkbox" id="item1" name="list" value="Option1">
+        <label for="item1">Option 1</label>
+
+        <label for="cars">Choose a course:</label>
+        <select id="courses">
+            <optgroup label="Programming">
+                <option value="c++" selected>C++</option>
+                <option value="java">Java</option>
+                <option value="javascript">Java Script</option>
+                <option value="flutter">Flutter</option>
+
+            </optgroup>
+            <optgroup label="Business">
+                <option value="mba">MBA</option>
+                <option value="hrm">HRM</option>
+                <option value="communications">Business Communications</option>
+                <option value="management" disabled>Principles of Management</option>
+
+            </optgroup>
+        </select>
+
+
+    </form>
+
+    <form>
+
+        <label for="browser">Choose a browser:</label>
+        <input list="browsers" id="browser" name="browser">
+
+        <datalist id="browsers">
+            <option value="Google Chrome">
+            <option value="Mozilla Firefox">
+            <option value="Microsoft Edge">
+            <option value="Safari">
+            <option value="Opera">
+            <option value="Brave">
+        </datalist>
+
+    </form>
+
+<iframe src="https://youtu.be/uqHJmpShup0" width="600" height="400" title="Hunter X Hunter"    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+
+
+</iframe>
+
+<table border="1">
+
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Subject</th>
+            <th>Grade</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>Ali</td>
+            <td>Math</td>
+            <td>85</td>
+        </tr>
+
+        <tr>
+            <td>Sara</td>
+            <td>Science</td>
+            <td>90</td>
+        </tr>
+
+        <tr>
+            <td>Omar</td>
+            <td>English</td>
+            <td>80</td>
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="2">Average Grade</td>
+            <td>85</td>
+        </tr>
+    </tfoot>
+
+</table>
+</body>
+
+</html>
