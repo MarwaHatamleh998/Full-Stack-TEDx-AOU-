@@ -83,3 +83,64 @@ body {
 ```
 
 أما إذا كان المطلوب فقط أن تكون `profile_card` في منتصف العرض، فـ `margin: 0 auto;` هو الحل البسيط.
+
+
+
+في Flexbox:
+
+* `justify-content` يتحكم بالمحور الرئيسي (**main axis**).
+* `align-items` يتحكم بالمحور العرضي (**cross axis**).
+
+عندما يكون:
+
+```css id="f4f57m"
+display: flex;
+flex-direction: row; /* الافتراضي */
+```
+
+فإن:
+
+* أفقيًا → `justify-content`
+* عموديًا → `align-items`
+
+مثال لتوسيط عنصر في منتصف الصفحة:
+
+```css id="dbewv5"
+body {
+    display: flex;
+    justify-content: center; /* أفقي */
+    align-items: center;     /* عمودي */
+    min-height: 100vh;
+}
+```
+
+---
+
+أما إذا غيرت الاتجاه إلى:
+
+```css id="o0m0lm"
+display: flex;
+flex-direction: column;
+```
+
+فإن المحاور تنعكس:
+
+* عموديًا → `justify-content`
+* أفقيًا → `align-items`
+
+مثال:
+
+```css id="2n7tf4"
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* عمودي */
+    align-items: center;     /* أفقي */
+    height: 100vh;
+}
+```
+
+قاعدة سريعة للحفظ:
+
+> `justify-content` = اتجاه الـ `flex-direction`
+> `align-items` = الاتجاه الآخر (المتعامد معه).
