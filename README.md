@@ -39,3 +39,47 @@ width: 100%;
 ```
 
 هذا يجعل التصميم أكثر قابلية للاستجابة (responsive) وأسهل في الصيانة.
+
+
+
+نعم، `margin: 0 auto;` يوسّط العنصر **أفقيًا فقط**، وليس عموديًا.
+
+يجب أن يكون للعنصر عرض (`width`) محدد أو أقل من عرض الأب:
+
+```css id="9j0iwj"
+.profile_card {
+    width: 300px;
+    margin: 0 auto;
+}
+```
+
+أو:
+
+```css id="gdb2cp"
+.profile_card {
+    max-width: 300px;
+    margin: 0 auto;
+}
+```
+
+### لماذا يعمل؟
+
+* `margin-top` و `margin-bottom` = `0`
+* `margin-left` و `margin-right` = `auto`
+
+فيقوم المتصفح بتوزيع المساحة الفارغة بالتساوي على الجانبين.
+
+### ملاحظة
+
+إذا أردت التوسيط **أفقيًا وعموديًا** في الصفحة كلها، فـ `margin: 0 auto` وحدها لا تكفي، واستخدم Flexbox:
+
+```css id="b8sn8n"
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+```
+
+أما إذا كان المطلوب فقط أن تكون `profile_card` في منتصف العرض، فـ `margin: 0 auto;` هو الحل البسيط.
